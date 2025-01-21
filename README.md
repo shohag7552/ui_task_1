@@ -17,3 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ![simulator_screenshot_A8816C0A-B80D-49A7-B051-645F1546AF7D](https://github.com/user-attachments/assets/11ceec25-fde5-46fb-b30d-bbb781129d32)
   
+<img width="371" alt="Screenshot 2025-01-21 at 5 57 14 PM" src="https://github.com/user-attachments/assets/f6aa151c-c696-4867-9051-545cd5a04bab" />
