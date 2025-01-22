@@ -28,10 +28,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   void _initTabList() {
     for (int i = 0; i < categories.length; i++) {
       _key.add(GlobalKey());
-      // _tabInfoList.add({
-      //   'key': new GlobalKey(),
-      //   'label': categories[i].name,
-      // });
     }
   }
   
@@ -41,7 +37,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
     super.initState();
 
     scrollController.addListener(() {
-      if(scrollController.position.pixels > 580) {
+      print(scrollController.position.pixels);
+
+      if(scrollController.position.pixels > 330) {
         setState(() {
           pinAppBar = false;
         });
@@ -82,6 +80,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     borderRadius: BorderRadius.circular(10),
                   ),
                   padding: const EdgeInsets.all(PaddingSize.extraSmall),
+                  margin: const EdgeInsets.only(top: PaddingSize.small),
                   child: Icon(Icons.notifications_outlined, size: 24),
                 ),
               ]),
@@ -137,14 +136,15 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             SliverPersistentHeader(
               pinned: true,
               delegate: SliverDelegate(
-                height: 30, child: ColoredBox(
+                height: 40, child: Container(
                   color: Theme.of(context).cardColor,
+                  padding: EdgeInsets.only(top: 10),
                   child: TabBar(
                   controller: _categoryTabController,
                   isScrollable: true,
                   tabAlignment: TabAlignment.start,
                   indicator: BoxDecoration(
-                    color: Theme.of(context).primaryColor.withValues(alpha: 0.5), // Background color of the selected tab
+                    color: Theme.of(context).primaryColor.withValues(alpha: 0.8), // Background color of the selected tab
                     borderRadius: BorderRadius.circular(5), // Rounded corners
                   ),
                   labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),

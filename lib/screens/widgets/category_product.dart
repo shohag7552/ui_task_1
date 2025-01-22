@@ -65,7 +65,7 @@ class _CategoryProductState extends State<CategoryProduct> with SingleTickerProv
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [BoxShadow(color: Theme.of(context).disabledColor.withValues(alpha: 0.1), blurRadius: 5)],
                   ),
-                  padding: const EdgeInsets.all(PaddingSize.small),
+                  padding: const EdgeInsets.all(PaddingSize.extraSmall),
                   child: Column(
                     children: [
                 
